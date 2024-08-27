@@ -13,3 +13,5 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 3);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
+
+INSERT INTO tb_course (name, img_uri, img_gray_uri) values ('Bootcamp FrontEnd', '/Users/rodrigoweber/Downloads/dslearn/src/main/resources/images/images.jpeg', '/Users/rodrigoweber/Downloads/dslearn/src/main/resources/images/RMhVjjVD4x1sL1vNnEx6BBFITf9eaEPedch3nfqs.png');
