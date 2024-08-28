@@ -18,3 +18,7 @@ INSERT INTO tb_course (name, img_uri, img_gray_uri) values ('Bootcamp FrontEnd',
 
 INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2024-07-14T10:00:00Z', TIMESTAMP WITH TIME ZONE '2025-07-14T10:00:00Z', 1);
 INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('2.0', TIMESTAMP WITH TIME ZONE '2024-12-14T10:00:00Z', TIMESTAMP WITH TIME ZONE '2025-12-14T10:00:00Z', 1);
+
+INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) VALUES ('Trilha HTML', 'Trilha inicial do Curso de Front', 1, '/Users/rodrigoweber/Downloads/dslearn/src/main/resources/images/front-end-developer-1024x512.png', 1, 1);
+INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) VALUES ('Forum', 'Tire suas dúvidas', 2, '/Users/rodrigoweber/Downloads/dslearn/src/main/resources/images/front-end-developer-1024x512.png', 2, 1);
+INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) VALUES ('Lives', 'Lives exclusivas para a turma', 3, '/Users/rodrigoweber/Downloads/dslearn/src/main/resources/images/front-end-developer-1024x512.png', 0, 1);
