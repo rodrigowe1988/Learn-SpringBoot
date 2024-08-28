@@ -26,3 +26,6 @@ INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) 
 INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ('Capítulo 01', 'Neste capítulo iremos começar com o básico de HTML', 1, '/Users/rodrigoweber/Downloads/dslearn/src/main/resources/images/front-end-developer-1024x512.png', 1, null) ;
 INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ('Capítulo 02', 'Neste capítulo iremos continuar com o básico de HTML', 2, '/Users/rodrigoweber/Downloads/dslearn/src/main/resources/images/front-end-developer-1024x512.png', 1, 1) ;
 INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ('Capítulo 03', 'Neste capítulo iremos finalizar com o básico de HTML', 3, '/Users/rodrigoweber/Downloads/dslearn/src/main/resources/images/front-end-developer-1024x512.png', 1, 2) ;
+
+INSERT INTO tb_enrollment (user_id, offer_id, enroll_moment, refund_moment, available, only_update) VALUES (1, 1, TIMESTAMP WITH TIME ZONE '2024-07-14T10:00:00Z', null, true, false);
+INSERT INTO tb_enrollment (user_id, offer_id, enroll_moment, refund_moment, available, only_update) VALUES (2, 1, TIMESTAMP WITH TIME ZONE '2024-07-14T10:00:00Z', null, true, false);

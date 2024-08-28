@@ -22,9 +22,9 @@ public class Enrollment implements Serializable {
     @EmbeddedId
     private EnrollmentPK id = new EnrollmentPK();
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
-    private Instant enrollment;
+    private Instant enrollMoment;
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
-    private Instant refundMent;
+    private Instant refundMoment;
     private boolean available;
     private boolean onlyUpdate;
 
@@ -32,8 +32,8 @@ public class Enrollment implements Serializable {
         super();
         id.setUser(user);
         id.setOffer(offer);
-        this.enrollment = enrollment;
-        this.refundMent = refundMent;
+        this.enrollMoment = enrollment;
+        this.refundMoment = refundMent;
         this.available = available;
         this.onlyUpdate = onlyUpdate;
     }
