@@ -5,23 +5,25 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.Serializable;
+import java.time.Instant;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "tb_course")
-public class Course {
+@Table(name = "tb_offer")
+public class Offer implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String imgUri;
-    private String imgGrayUri;
-    @OneToMany(mappedBy = "course")
-    private List<Offer> offers = new ArrayList<>();
+    private String edition;
+    private Instant startMoment;
+    private Instant endMoment;
+    @ManyToOne
+    @JoinColumn(name = "course_id")
+    private Course course;
+
 }

@@ -15,3 +15,6 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 
 INSERT INTO tb_course (name, img_uri, img_gray_uri) values ('Bootcamp FrontEnd', '/Users/rodrigoweber/Downloads/dslearn/src/main/resources/images/images.jpeg', '/Users/rodrigoweber/Downloads/dslearn/src/main/resources/images/RMhVjjVD4x1sL1vNnEx6BBFITf9eaEPedch3nfqs.png');
+
+INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2024-07-14T10:00:00Z', TIMESTAMP WITH TIME ZONE '2025-07-14T10:00:00Z', 1);
+INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('2.0', TIMESTAMP WITH TIME ZONE '2024-12-14T10:00:00Z', TIMESTAMP WITH TIME ZONE '2025-12-14T10:00:00Z', 1);
