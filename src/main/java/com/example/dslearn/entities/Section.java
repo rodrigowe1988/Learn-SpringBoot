@@ -27,5 +27,4 @@ public class Section implements Serializable {
     @ManyToOne
     @JoinColumn(name = "prerequisite_id")
     private Section prerequisite;
-
 }
