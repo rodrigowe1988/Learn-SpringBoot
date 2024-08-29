@@ -21,6 +21,4 @@ public class Task extends Lesson implements Serializable {
     private Double weight;
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant dueDate;
-
-
 }

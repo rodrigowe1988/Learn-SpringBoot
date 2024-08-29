@@ -6,26 +6,24 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.Instant;
 
+@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "tb_section")
-public class Section implements Serializable {
+@Table(name = "tb_notification")
+public class Notification implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String title;
-    private String description;
-    private Integer position;
-    private String imgUri;
+    private String text;
+    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+    private Instant moment;
+    private boolean read;
+    private String route;
     @ManyToOne
-    @JoinColumn(name = "resource_id")
-    private Resource resource;
-    @ManyToOne
-    @JoinColumn(name = "prerequisite_id")
-    private Section prerequisite;
-
+    @JoinColumn(name = "user_id")
+    private User user;
 }

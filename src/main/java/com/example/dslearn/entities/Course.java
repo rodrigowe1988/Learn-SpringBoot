@@ -15,7 +15,6 @@ import java.util.List;
 @Table(name = "tb_course")
 public class Course {
     private static final long serialVersionUID = 1L;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
