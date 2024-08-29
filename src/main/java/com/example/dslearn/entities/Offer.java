@@ -30,4 +30,7 @@ public class Offer implements Serializable {
     private Course course;
     @OneToMany(mappedBy = "offer")
     List<Resource> resources = new ArrayList<>();
+    @OneToMany(mappedBy = "offer")
+    List<Topic> topics = new ArrayList<>();
+
 }

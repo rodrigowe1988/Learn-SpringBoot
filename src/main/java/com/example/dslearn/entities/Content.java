@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -18,8 +19,8 @@ public class Content extends Lesson implements Serializable {
     private String textContent;
     private String videoUri;
 
-    public Content(Long id, String title, Integer position, Section section, Set<Enrollment> enrollmentsDone, String textContent, String videoUri) {
-        super(id, title, position, section, enrollmentsDone);
+    public Content(Long id, String title, Integer position, Section section, List<Deliver> deliveries, Set<Enrollment> enrollmentsDone, String textContent, String videoUri) {
+        super(id, title, position, section, deliveries, enrollmentsDone);
         this.textContent = textContent;
         this.videoUri = videoUri;
     }
