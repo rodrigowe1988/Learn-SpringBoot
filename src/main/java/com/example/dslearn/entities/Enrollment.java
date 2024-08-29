@@ -5,15 +5,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "tb_enrollment")
 public class Enrollment implements Serializable {
@@ -27,6 +27,8 @@ public class Enrollment implements Serializable {
     private Instant refundMoment;
     private boolean available;
     private boolean onlyUpdate;
+    @ManyToMany(mappedBy = "enrollmentsDone")
+    private Set<Lesson> lessonsDone = new HashSet<>();
 
     public Enrollment(User user, Offer offer, Instant enrollment, Instant refundMent, boolean available, boolean onlyUpdate) {
         super();
